@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Banner from './components/Banner';
+import {LoggedInBanner} from './components/Banner';
 
 const EXAMPLE_USER = {
     name: 'Vowkaz',
@@ -9,13 +9,20 @@ const EXAMPLE_USER = {
 
 function App() {
     return (
-        <Banner
+        <>
+        <LoggedInBanner
             type="success"
             user={EXAMPLE_USER}
         >
-            Successfully logged in! Welcome aboard, {EXAMPLE_USER.name}!
-        </Banner>
+            Chance your password!, {' '} { EXAMPLE_USER.name}
+
+        </LoggedInBanner>
+
+
+        </>
     );
 }
+
+
 
 export default App;
